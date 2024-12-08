@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Job Portal</h1>
+        </header>
+
+        <!-- User Profile Form -->
+        <section id="createProfile">
+            <h2>Create User Profile</h2>
+            <form id="profileForm">
+                <label for="userName">Username:</label>
+                <input type="text" id="userName" required>
+
+                <label for="skills">Skills (comma separated):</label>
+                <input type="text" id="skills" required>
+
+                <label for="resume">Resume (URL):</label>
+                <input type="text" id="resume" required>
+
+                <label for="profilePhoto">Profile Photo (URL):</label>
+                <input type="text" id="profilePhoto" required>
+
+                <button type="submit">Create Profile</button>
+            </form>
+        </section>
+
+        <!-- Job Filter Form -->
+        <section id="jobFilter">
+            <h2>Filter Jobs</h2>
+            <form id="jobFilterForm">
+                <label for="salaryRange">Salary Range:</label>
+                <input type="text" id="salaryRange">
+
+                <label for="location">Location:</label>
+                <input type="text" id="location">
+
+                <label for="jobType">Job Type:</label>
+                <input type="text" id="jobType">
+
+                <button type="submit">Filter Jobs</button>
+            </form>
+        </section>
+
+        <!-- Job Listings -->
+        <section id="jobListings">
+            <h2>Available Job Listings</h2>
+            <div id="jobResults">
+                <!-- Filtered job listings will appear here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
