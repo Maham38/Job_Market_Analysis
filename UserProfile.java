@@ -1,32 +1,46 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.jobportal;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+
 class UserProfile {
     String userName;
     List<String> skills;
-    String resume;
-    String profilePhoto;
+    String resumePath;  // Path to the resume (Word or PDF)
+    String profilePhotoPath;  // Path to the profile photo (PNG)
 
-    public UserProfile(String userName, List<String> skills, String resume, String profilePhoto) {
+    // Constructor to initialize the user profile with photo and resume paths
+    public UserProfile(String userName, List<String> skills, String resumePath, String profilePhotoPath) {
         this.userName = userName;
         this.skills = skills;
-        this.resume = resume;
-        this.profilePhoto = profilePhoto;
+        this.resumePath = resumePath;
+        this.profilePhotoPath = profilePhotoPath;
     }
 
+    // Method to return a string representation of the user profile
     @Override
     public String toString() {
         return "User Profile{" +
                 "userName='" + userName + '\'' +
                 ", skills=" + skills +
-                ", resume='" + resume + '\'' +
-                ", profilePhoto='" + profilePhoto + '\'' +
+                ", resumePath='" + resumePath + '\'' +
+                ", profilePhotoPath='" + profilePhotoPath + '\'' +
                 '}';
+    }
+
+    // Getter and setter methods for resumePath and profilePhotoPath
+    public String getResumePath() {
+        return resumePath;
+    }
+
+    public void setResumePath(String resumePath) {
+        this.resumePath = resumePath;
+    }
+
+    public String getProfilePhotoPath() {
+        return profilePhotoPath;
+    }
+
+    public void setProfilePhotoPath(String profilePhotoPath) {
+        this.profilePhotoPath = profilePhotoPath;
     }
 }
